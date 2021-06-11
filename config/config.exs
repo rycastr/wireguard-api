@@ -18,6 +18,10 @@ config :wireguard, WireGuardWeb.Endpoint,
   pubsub_server: WireGuard.PubSub,
   live_view: [signing_salt: "4eUhp2Ux"]
 
+config :wireguard, WireGuard.Repo,
+  migration_primary_key: [type: :binary_id],
+  migration_foreign_key: [type: :binary_id]
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
