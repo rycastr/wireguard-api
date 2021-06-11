@@ -1,4 +1,4 @@
-defmodule Wireguard.MixProject do
+defmodule WireGuard.MixProject do
   use Mix.Project
 
   def project do
@@ -19,7 +19,7 @@ defmodule Wireguard.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Wireguard.Application, []},
+      mod: {WireGuard.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

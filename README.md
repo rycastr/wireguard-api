@@ -1,4 +1,4 @@
-# Wireguard
+# WireGuard
 
 To start your Phoenix server:
 

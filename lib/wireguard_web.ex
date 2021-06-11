@@ -1,12 +1,12 @@
-defmodule WireguardWeb do
+defmodule WireGuardWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use WireguardWeb, :controller
-      use WireguardWeb, :view
+      use WireGuardWeb, :controller
+      use WireGuardWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,11 +19,11 @@ defmodule WireguardWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: WireguardWeb
+      use Phoenix.Controller, namespace: WireGuardWeb
 
       import Plug.Conn
-      import WireguardWeb.Gettext
-      alias WireguardWeb.Router.Helpers, as: Routes
+      import WireGuardWeb.Gettext
+      alias WireGuardWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -31,7 +31,7 @@ defmodule WireguardWeb do
     quote do
       use Phoenix.View,
         root: "lib/wireguard_web/templates",
-        namespace: WireguardWeb
+        namespace: WireGuardWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -54,7 +54,7 @@ defmodule WireguardWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import WireguardWeb.Gettext
+      import WireGuardWeb.Gettext
     end
   end
 
@@ -63,9 +63,9 @@ defmodule WireguardWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import WireguardWeb.ErrorHelpers
-      import WireguardWeb.Gettext
-      alias WireguardWeb.Router.Helpers, as: Routes
+      import WireGuardWeb.ErrorHelpers
+      import WireGuardWeb.Gettext
+      alias WireGuardWeb.Router.Helpers, as: Routes
     end
   end
 

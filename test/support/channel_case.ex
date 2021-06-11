@@ -1,4 +1,4 @@
-defmodule WireguardWeb.ChannelCase do
+defmodule WireGuardWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -11,7 +11,7 @@ defmodule WireguardWeb.ChannelCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use WireguardWeb.ChannelCase, async: true`, although
+  by setting `use WireGuardWeb.ChannelCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -21,18 +21,18 @@ defmodule WireguardWeb.ChannelCase do
     quote do
       # Import conveniences for testing with channels
       import Phoenix.ChannelTest
-      import WireguardWeb.ChannelCase
+      import WireGuardWeb.ChannelCase
 
       # The default endpoint for testing
-      @endpoint WireguardWeb.Endpoint
+      @endpoint WireGuardWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Wireguard.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(WireGuard.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Wireguard.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(WireGuard.Repo, {:shared, self()})
     end
 
     :ok

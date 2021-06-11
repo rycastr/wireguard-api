@@ -1,11 +1,11 @@
-defmodule WireguardWeb.Router do
-  use WireguardWeb, :router
+defmodule WireGuardWeb.Router do
+  use WireGuardWeb, :router
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/api", WireguardWeb do
+  scope "/api/v1", WireGuardWeb do
     pipe_through :api
   end
 
@@ -21,7 +21,7 @@ defmodule WireguardWeb.Router do
 
     scope "/" do
       pipe_through [:fetch_session, :protect_from_forgery]
-      live_dashboard "/dashboard", metrics: WireguardWeb.Telemetry
+      live_dashboard "/dashboard", metrics: WireGuardWeb.Telemetry
     end
   end
 end

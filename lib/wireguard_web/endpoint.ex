@@ -1,4 +1,4 @@
-defmodule WireguardWeb.Endpoint do
+defmodule WireGuardWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :wireguard
 
   # The session will be stored in the cookie and signed,
@@ -10,7 +10,7 @@ defmodule WireguardWeb.Endpoint do
     signing_salt: "o8+4fJ5D"
   ]
 
-  socket "/socket", WireguardWeb.UserSocket,
+  socket "/socket", WireGuardWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -48,5 +48,5 @@ defmodule WireguardWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug WireguardWeb.Router
+  plug WireGuardWeb.Router
 end

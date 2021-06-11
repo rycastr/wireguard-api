@@ -8,14 +8,14 @@
 use Mix.Config
 
 config :wireguard,
-  ecto_repos: [Wireguard.Repo]
+  ecto_repos: [WireGuard.Repo]
 
 # Configures the endpoint
-config :wireguard, WireguardWeb.Endpoint,
+config :wireguard, WireGuardWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "wdy7KAihu2I+L8/61OgJpfBck7KIeI9mZoXTft618IIeMoyQFs6NiDDMxh64WjwT",
-  render_errors: [view: WireguardWeb.ErrorView, accepts: ~w(json), layout: false],
-  pubsub_server: Wireguard.PubSub,
+  render_errors: [view: WireGuardWeb.ErrorView, accepts: ~w(json), layout: false],
+  pubsub_server: WireGuard.PubSub,
   live_view: [signing_salt: "4eUhp2Ux"]
 
 # Configures Elixir's Logger

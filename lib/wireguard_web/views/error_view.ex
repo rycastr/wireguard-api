@@ -1,5 +1,5 @@
-defmodule WireguardWeb.ErrorView do
-  use WireguardWeb, :view
+defmodule WireGuardWeb.ErrorView do
+  use WireGuardWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

@@ -1,4 +1,4 @@
-defmodule WireguardWeb.Telemetry do
+defmodule WireGuardWeb.Telemetry do
   use Supervisor
   import Telemetry.Metrics
 
@@ -49,7 +49,7 @@ defmodule WireguardWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {WireguardWeb, :count_users, []}
+      # {WireGuardWeb, :count_users, []}
     ]
   end
 end
